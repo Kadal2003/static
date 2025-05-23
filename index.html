@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product Demo</title>
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --bg: #f9fafb;
+      --text: #111827;
+      --light: #ffffff;
+      --gray: #6b7280;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      background: var(--light);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+      text-align: center;
+      background: var(--light);
+    }
+
+    .hero img {
+      max-width: 300px;
+      margin: 1rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      background: var(--primary);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .section {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .feature {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      max-width: 300px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+
+    .feature h3 {
+      margin: 1rem 0 0.5rem;
+      color: var(--primary);
+    }
+
+    .testimonials {
+      background: #eef2ff;
+    }
+
+    .testimonial {
+      max-width: 600px;
+      margin: 1rem auto;
+      background: white;
+      padding: 1rem 1.5rem;
+      border-radius: 12px;
+      font-style: italic;
+    }
+
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 1rem;
+      color: var(--gray);
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+      }
+
+      .features {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div><strong>ProductX</strong></div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <h1>Experience the Future of Productivity</h1>
+      <p>All-in-one app to boost your workflow, simplify tasks, and achieve more.</p>
+      <button class="btn">Try Now</button>
+    </div>
+    <img src="https://via.placeholder.com/300x300?text=Product+Image" alt="Product image" />
+  </section>
+
+  <section class="section" id="features">
+    <h2>Features</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>🚀 Fast</h3>
+        <p>Lightning-fast performance and seamless navigation.</p>
+      </div>
+      <div class="feature">
+        <h3>🔒 Secure</h3>
+        <p>Top-level security to protect your data and privacy.</p>
+      </div>
+      <div class="feature">
+        <h3>🎨 Beautiful</h3>
+        <p>Modern design that adapts to any device.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section testimonials" id="testimonials">
+    <h2>What Our Users Say</h2>
+    <div class="testimonial">
+      “ProductX changed how I work. It’s fast, simple, and just works!”
+    </div>
+    <div class="testimonial">
+      “Love the design and the ease of use. Highly recommend!”
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <h2>Contact Us</h2>
+    <form onsubmit="alert('Message sent!'); return false;">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="4" placeholder="Your Message" required></textarea>
+      <button type="submit" class="btn">Send Message</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    &copy; 2025 ProductX. All rights reserved.
+  </footer>
+
+</body>
+</html>
